@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: maison-savour
+    runtime: static
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+    autoDeploy: true
